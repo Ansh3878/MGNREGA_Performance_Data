@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+
+    --primary: 211 100% 34%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 17% 95%;
+    --secondary-foreground: 0 0% 13%;
+
+    --muted: 210 17% 95%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 210 17% 95%;
+    --accent-foreground: 0 0% 13%;
+
+    --success: 122 39% 33%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 68% 47%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 36 100% 50%;
+    --warning-foreground: 0 0% 13%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 211 100% 34%;
+
+    --radius: 0.75rem;
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Noto Sans Devanagari', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 18px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
